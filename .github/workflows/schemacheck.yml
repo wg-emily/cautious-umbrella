@@ -26,7 +26,7 @@ jobs:
 
       - name: Run subgraph check
         run: |
-          wgc subgraph check employees --schema ./employees.graphqls
+          wgc subgraph check employees --schema ./schema.graphqls
           # Add more check commands here for more subgraphs
         env:
           COSMO_API_KEY: ${{ secrets.COSMO_API_KEY }}
