@@ -27,7 +27,7 @@ jobs:
           npm install -g wgc@latest
 
       - name: Publish Schema
-        env: # add auth token as env variable
+        env: # add auth token as environment variable
           COSMO_API_KEY: ${{ secrets.COSMO_API_KEY }}
         run: |
           wgc subgraph publish employees --schema ./schema.graphqls --namespace development
