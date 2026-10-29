@@ -131,12 +131,13 @@ type Operator implements RoleType {
   operatorType: [OperationType!]!
 }
 
-#type Details {
-#  forename: String! @shareable
-#  location: Country!
-#  surname: String! @shareable
-#  pastLocations: [City!]!
-#}
+type Details {
+  middleName: String!
+  forename: String! @shareable
+  location: Country!
+  surname: String! @shareable
+  pastLocations: [City!]!
+}
 
 type City {
   type: String!
