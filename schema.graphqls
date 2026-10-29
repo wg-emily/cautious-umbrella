@@ -133,6 +133,7 @@ type Operator implements RoleType {
 
 type Details {
   favoriteAnimal: String!
+  favoriteSmell: String!
   forename: String! @shareable
   location: Country!
   middleName: String!
