@@ -132,9 +132,10 @@ type Operator implements RoleType {
 }
 
 type Details {
-  middleName: String!
+  favoriteAnimal: String!
   forename: String! @shareable
   location: Country!
+  middleName: String!
   surname: String! @shareable
   pastLocations: [City!]!
 }
