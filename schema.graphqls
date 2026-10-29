@@ -132,7 +132,7 @@ type Operator implements RoleType {
 }
 
 type Details {
-  forename: String! @shareable
+  #forename: String! @shareable
   location: Country!
   surname: String! @shareable
   pastLocations: [City!]!
