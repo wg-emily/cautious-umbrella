@@ -1,0 +1,17 @@
+name: Publish Schema
+
+on:
+  pull_request:
+    branches:
+      - main     # The target branch (base)
+    types:
+      - closed   # Triggers when a PR is closed or merged
+
+jobs:
+  deploy:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Publish Schema
+        run: |
+          wgc subgraph publish employees --schema ./schema.graphqls --namespace development
